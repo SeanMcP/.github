@@ -4,6 +4,8 @@
 
 > Create a new component called CopyButton in apps/assessments/ that extends Wonder Block's Button by adding a click handler that copies a provided string to the clipboard. The label of the button should change from Copy to Copied after it has been selected. Create a Storybook file with a default story. Create a test file with two test cases: 1) that the text is copied to the clipboard, and 2) that the label changes after clicking.
 
+The org-wide `frontend-rules.instructions.md` instructions were included in the prompt.
+
 ## Context
 
 - The `apps/assessments/` directory uses `__tests__/` and `__stories__/` for organizing files
@@ -87,3 +89,10 @@
 - Test: Didn't import jest globals
 - Test: Used `fireEvent` instead of `userEvent`
 - Stories: Unused imports
+
+## Conclusion
+
+- For the best overall experience generating a component, tests, and stories in one shot, `claude-sonnet-3.5` was superior.
+- For generation, less was more. It's much easier for me to identify code that needed to be added than it was code that needed to be removed.
+- The models (VS Code?) were less likely to pick up on additional instructions. Consider adding them all (_e.g._ for tests and stories) explicitly.
+- The iterations from `claude-sonnet-3.7` and `claude-sonnet-4` were slower, but they did produce more-complete code. I would probably prefer them if I were working on a single file.
